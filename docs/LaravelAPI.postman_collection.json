@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "def7da7d-689a-4882-8c58-97773f95d7a2",
+		"name": "LaravelAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhMjk5MDU1MWJkODQ4MDdmZWZiYzM0NjZhNDgxMDQ2NWU0MzE5YTZkNjcyOTQwZmEwMjg0YjRkNGI2ZDhhZGM1ZjgyM2I1Yjc3M2NlMzZhIn0.eyJhdWQiOiIxIiwianRpIjoiY2EyOTkwNTUxYmQ4NDgwN2ZlZmJjMzQ2NmE0ODEwNDY1ZTQzMTlhNmQ2NzI5NDBmYTAyODRiNGQ0YjZkOGFkYzVmODIzYjViNzczY2UzNmEiLCJpYXQiOjE1NzY5MzQ5MDQsIm5iZiI6MTU3NjkzNDkwNCwiZXhwIjoxNjA4NTU3MzA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.jSn1CDlA_NtnSPMfDWCBJfrWlQkY65sFxcAjBXuUx8K8NVYYgNXVYRFT8Zz4B-1iUyzqiYv9Rl8fBXohWSyCoqxbX13frVtL-s7GdVvWkSvqONyLItCVuGg0lxxLdGc6FWN91LPNGIJGOjfSgulcW1aGpDpB7twju3YWSlbvP6ttN1WIlEpJx4x0myVV1RWThMVpzGkmri_szTtA8Xv-FaLDggRhqm5iiDPz2mbfqR9L-WpD3at3HRtPSwlyYQ43pE3FVWAhGLxlqnqojNwxsZk0aLFFwSRpBY8wGhOQnmobKovzI4mxw7nmK8yqR-JoQEa0RRUQpVMM98PwUAEn9eGx4HPhdZ9cbJuJJ6T6N2c6IwhoI5FXHW--hA6i8VugiTwvzIrW95u1cnPvn3UbBoxTaBc4XOP3-V4eRDFcwotRMqvEVuqtmjdqfrVUQlXgB6gwfAYyyLWyFLe8FNAixHxILpoB_MH9EyW9kXVtHzkppqOaF7xx1yZktxpVmAEIFhvS__b5vUnMwFWQxMjhxYx_kX3i-1zIwjkOnP-1FVGoZFlBH2-y9k3adEezI9Ll9WqhK69ulWh5N4bA_zeif6aW-Pr3OpPvLMHCjR4w5brqjO7nYouNQbZlYSU_zwvEgG4ntnF4NlDABCok19KiOBdCGfuVeZWtmM3rEg2VqYM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/v1/getUser",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"getUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "rajanama@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "rajanama",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "rajanama@yopmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "c_password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
