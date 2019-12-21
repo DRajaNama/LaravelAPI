@@ -25,10 +25,10 @@ class AuthController extends Controller
         }    
         $input = $request->all();  
         $input['password'] = bcrypt($input['password']);
-        $input['api_token'] = Str::random(60);
         $user = User::create($input); 
-        $data['token'] =  $user->createToken('AppName')->accessToken;
-        return response()->json(['success'=>true,'data'=>$data], $this->successStatus); 
+        $user->api_token = $user->createToken('AppName')-> accessToken;
+        $user->save(); 
+        return response()->json(['success'=>true,'data'=>$user], $this->successStatus); 
     }
 
 
