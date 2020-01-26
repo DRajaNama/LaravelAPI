@@ -16,16 +16,31 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        
+        <!--- sidebar start here --->
+        @guest
+        @else  
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" id="closeNav" onclick="closeNav()" style="display:none;">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" id="openNav"  onclick="openNav()"><i class="fa fa-th"></i></a>
+            <a href="/home" class="menu-icons" ><i class="fa fa-dashboard"></i> &nbsp; <span class="menu_collaspe">Dashboard</span></a>
+            <a href="/project" class="menu-icons" ><i class="fa fa-list"></i> &nbsp; <span class="menu_collaspe">Project</span></a>
+            
+        </div>
+        @endguest
+        <div id="main">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel navbar-inverse">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'MailZap') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -70,10 +85,14 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
-            @yield('content')
-        </main>
+             <main class="py-4">
+                @include('pages.alert')
+                @yield('content')
+                @include('pages.model')
+            </main>
+        </div>
+        <!--- sidebar end here --> 
+        
     </div>
 </body>
 </html>
